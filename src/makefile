@@ -3,9 +3,9 @@ all: *.c *.h
 
 install: 
 	mv libretron /usr/local/bin
-	cp libretron.png /usr/share/pixmaps
-	chmod +x libretron.desktop
-	cp libretron.desktop /usr/share/applications
+	cp ../data/libretron.png /usr/share/pixmaps
+	chmod +x ../data/libretron.desktop
+	cp ../data/libretron.desktop /usr/share/applications
 
 uninstall:
 	rm /usr/local/bin/libretron
