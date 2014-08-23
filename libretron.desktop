@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Libretron
+Comment=Electronic academic transcript
+Comment[it]=Libretto universitario elettronico
+Exec=/usr/local/bin/libretron
+Icon=/usr/share/pixmaps/libretron.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
