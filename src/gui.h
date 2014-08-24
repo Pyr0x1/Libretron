@@ -1,10 +1,3 @@
-/*
- * gui.h
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #ifndef GUI_H_
 #define GUI_H_
 
@@ -51,6 +44,7 @@ typedef struct guielems{
 	GtkWidget *removeButton;
 	GtkWidget *calcButton;
 	GtkWidget *resultLabel;
+	GtkWidget *gradLabel;
 
 	GdkPixbuf *icon;
 

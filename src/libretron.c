@@ -1,13 +1,3 @@
-/*
- ============================================================================
- Name        : Libretron.c
- Author      : Loris "Pyrox" Gabriele
- Version     :
- Copyright   :
- Description :
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "multistring.h"

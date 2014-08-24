@@ -1,10 +1,3 @@
-/*
- * guistrings.h
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #ifndef GUISTRINGS_H_
 #define GUISTRINGS_H_
 
@@ -15,7 +8,7 @@ typedef struct guistrings{
 	int nLangs;
 	int nStrings;
 
-	MultiString strings[18];
+	MultiString strings[20];
 
 }GuiStrings;
 

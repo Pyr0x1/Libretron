@@ -1,10 +1,3 @@
-/*
- * multistring.h
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #ifndef MULTISTRING_H_
 #define MULTISTRING_H_
 

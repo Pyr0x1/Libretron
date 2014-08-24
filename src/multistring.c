@@ -1,10 +1,3 @@
-/*
- * multistring.c
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>

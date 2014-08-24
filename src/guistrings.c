@@ -1,10 +1,3 @@
-/*
- * guistrings.c
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "guistrings.h"
@@ -44,6 +37,7 @@ int initGuiStrings(GuiStrings* gStrings){
 	setMultiString(&(gStrings->strings[16]), gStrings->nLangs, "Changes will be visible after restarting the application", "I cambiamenti saranno visibili dopo aver riavviato l'applicazione");
     setMultiString(&(gStrings->strings[17]), gStrings->nLangs, "Average", "Media");
     setMultiString(&(gStrings->strings[18]), gStrings->nLangs, "A simple electronic academic transcript", "Un semplice libretto universitario elettronico");
+    setMultiString(&(gStrings->strings[19]), gStrings->nLangs, "Graduation mark", "Voto di laurea");
 
 	return EXIT_SUCCESS;
 }

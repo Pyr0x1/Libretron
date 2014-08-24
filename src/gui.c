@@ -1,10 +1,3 @@
-/*
- * gui.c
- *
- *  Created on: 14/ago/2014
- *      Author: loris
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -103,9 +96,12 @@ void createGui(GuiElems* gElems, GuiStrings* gStrings, Settings* settings, FileN
     g_signal_connect (gElems->removeButton, "clicked", G_CALLBACK (removeHandler), (gpointer) &gParam);
     g_signal_connect (gElems->addButton, "clicked", G_CALLBACK (showPopup), (gpointer) &gParam);
 
-    // Add label for result
+    // Add labels for result
     gElems->resultLabel = gtk_label_new ("");
-    gtk_box_pack_start (GTK_BOX (gElems->vbox), gElems->resultLabel, FALSE, FALSE, 10);
+    gtk_box_pack_start (GTK_BOX (gElems->vbox), gElems->resultLabel, FALSE, FALSE, 0);
+
+    gElems->gradLabel = gtk_label_new ("");
+    gtk_box_pack_start (GTK_BOX (gElems->vbox), gElems->gradLabel, FALSE, FALSE, 10);
 
     calcAvg(gElems, gStrings, curLan);
 
@@ -421,13 +417,14 @@ void showAboutPopup(GtkMenuItem *infoMenuLabel, gpointer data){
 
 void calcAvg(GuiElems* gElems, GuiStrings* gStrings, int curLan){
 
-    int credits, mark, cnt;
+    int credits, mark, cnt, gradMark;
     double weightAvg;
     char buff[BUFSIZE];
     GtkTreeIter iter;
 
     cnt = 0;
     weightAvg = 0;
+    gradMark = 0;
 
     if(gtk_tree_model_get_iter_first(GTK_TREE_MODEL(gElems->store), &iter)){
         gtk_tree_model_get(GTK_TREE_MODEL(gElems->store), &iter, COL_CREDITS, &credits, COL_MARK, &mark, -1);
@@ -445,6 +442,11 @@ void calcAvg(GuiElems* gElems, GuiStrings* gStrings, int curLan){
 
     sprintf(buff, "%s: %.1f", gStrings->strings[17].multistring[curLan], weightAvg);
     gtk_label_set_text(GTK_LABEL(gElems->resultLabel), buff);
+
+    gradMark = weightAvg * 110 / 30;
+
+    sprintf(buff, "%s: %d", gStrings->strings[19].multistring[curLan], gradMark);
+    gtk_label_set_text(GTK_LABEL(gElems->gradLabel), buff);
 
     return ;
 }
