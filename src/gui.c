@@ -404,7 +404,7 @@ void showAboutPopup(GtkMenuItem *infoMenuLabel, gpointer data){
 
     gtk_about_dialog_set_program_name (GTK_ABOUT_DIALOG(dialog), "Libretron");
     gtk_about_dialog_set_version (GTK_ABOUT_DIALOG(dialog), "1.0");
-    gtk_about_dialog_set_website (GTK_ABOUT_DIALOG(dialog), "http://www.pyrox.it");
+    gtk_about_dialog_set_website (GTK_ABOUT_DIALOG(dialog), "https://github.com/Pyr0x1/Libretron");
     gtk_about_dialog_set_logo (GTK_ABOUT_DIALOG(dialog), gElems->icon);
     gtk_about_dialog_set_copyright (GTK_ABOUT_DIALOG(dialog), "Loris \"Pyrox\" Gabriele");
     gtk_about_dialog_set_comments (GTK_ABOUT_DIALOG(dialog), gStrings->strings[18].multistring[curLan]);
